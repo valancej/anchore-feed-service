@@ -1,2 +1,1 @@
-# anchore-feed-service
-Anchore On-Prem Feed Service
+# Anchore On-Prem Feed Service
