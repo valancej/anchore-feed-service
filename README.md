@@ -98,9 +98,9 @@ As part our Anchore Enterprise offering, an on-premise feed service is available
 
 Configuration: 
 
-    1. Update the top level feeds property in Anchore Engine's config.yaml to use the on-premise feed service endpoint. 
+1. Update the top level feeds property in Anchore Engine's config.yaml to use the on-premise feed service endpoint. 
 
-```
+    ```
     feeds:
       selective_sync:
         enabled: True
@@ -109,6 +109,6 @@ Configuration:
           packages: False
           nvd: False
     url: 'http://feedservice.example.com:8448/v1/feeds'
-```
+    ```
 
-    2. Restart Anchore Engine (or just the Policy Engine component containers if you have split the services out into their own containers) for the configuration changes to take effect. If the service starts successfully then it was able to reach the feed service endpoint. 
+2. Restart Anchore Engine (or just the Policy Engine component containers if you have split the services out into their own containers) for the configuration changes to take effect. If the service starts successfully then it was able to reach the feed service endpoint. 
