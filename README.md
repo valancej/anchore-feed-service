@@ -90,4 +90,25 @@ Run `docker-compose up -d` in the directory where the docker-compose.yaml file l
 Run `docker-compose down -v` in the directory where the docker-compose.yaml file lives. 
 
 
+## Feed Service Configuration with Anchore Engine
 
+By default, Anchore Engine is configured to use the public and free service maintained by Anchore at https://ancho.re/v1/service/feeds
+
+As part our Anchore Enterprise offering, an on-premise feed service is available.
+
+Configuration: 
+
+    1. Update the top level feeds property in Anchore Engine's config.yaml to use the on-premise feed service endpoint. 
+
+    ```
+    feeds:
+      selective_sync:
+        enabled: True
+        feeds:
+          vulnerabilities: True
+          packages: False
+          nvd: False
+    url: 'http://feedservice.example.com:8448/v1/feeds'
+    ```
+
+    2. Restart Anchore Engine (or just the Policy Engine component containers if you have split the services out into their own containers) for the configuration changes to take effect. If the service starts successfully then it was able to reach the feed service endpoint. 
