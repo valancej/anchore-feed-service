@@ -75,5 +75,7 @@ The Anchore Enterprise Feed Service is delivered as a Docker container that can 
 
 Make sure you've satisfied all of the requirememnts first.
 
-See the sample config files referenced here: 
+See the sample config files from this repository: https://github.com/valancej/anchore-feed-service
+
+
 
