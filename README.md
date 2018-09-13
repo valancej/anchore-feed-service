@@ -1,4 +1,4 @@
-# Anchore On-Prem Feed Service
+# Anchore On-Premise Feed Service
 
 ## Background
 
@@ -69,3 +69,11 @@ The Anchore Enterprise Feed Service is delivered as a Docker container that can 
 | s3-us-west-2.amazonaws.com | 443 | Ruby Gems data feed (stored in Amazon S3) |
 | static.nvd.nist.gov | 443 | NVD Database |
 | launchpad.net/ubuntu-cve-tracker | 443 | Ubuntu data |
+
+
+## Feed Service Installation
+
+Make sure you've satisfied all of the requirememnts first.
+
+See the sample config files referenced here: 
+

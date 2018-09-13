@@ -1,0 +1,47 @@
+version: '2'
+services:
+   anchore-feeds:
+     image: 'docker.io/anchore/enterprise-feed-service:latest'
+     depends_on:
+      - anchore-feeds-db
+      #uncomment if gem driver is enabled. Refer to config.yaml for configuring gem driver
+      #- anchore-gem-db
+     ports:
+      - "8448:8448"
+     volumes:
+      - /Users/jvalance/anchore/feed-config:/config/:Z
+      - /Users/jvalance/anchore/workspace:/workspace/:Z
+     environment:
+      - ANCHORE_ENGINE_SERVICES="anchore-feeds"
+     logging:
+      driver: "json-file"
+      options:
+       max-size: 100m
+   anchore-feeds-db:
+     image: "postgres:9"
+     volumes:
+      - /Users/jvalance/anchore/feeddb:/var/lib/postgresql/data/pgdata/:Z
+     environment:
+       - POSTGRES_PASSWORD=mysecretpassword
+       - PGDATA=/var/lib/postgresql/data/pgdata/
+     logging:
+      driver: "json-file"
+      options:
+       max-size: 100m
+     #uncomment to expose a port to allow direct/external access to the DB, for debugging
+     #ports:
+     # - "2345:5432"
+   #uncomment if gem driver is enabled. Refer to config.yaml for configuring gem driver
+   #anchore-gem-db:
+   #  image: "postgres:9"
+   #  environment:
+   #    - POSTGRES_PASSWORD=mysecretpassword
+   #    - PGDATA=/var/lib/postgresql/data/pgdata/
+   #  logging:
+   #   driver: "json-file"
+   #   options:
+   #    max-size: 100m
+   #  #uncomment to expose a port to allow direct/external access to the DB, for debugging
+   #  #ports:
+   #  # - "2345:5432"
+
