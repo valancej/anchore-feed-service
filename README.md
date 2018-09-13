@@ -60,3 +60,8 @@ The Anchore Enterprise Feed Service is delivered as a Docker container that can 
     | --- | --- |
     | linux.oracle.com | 443  | Oracle Linux Security Feed | 
     | git.alpinelinux.com | 443 | Alpine Linux Security database |
+
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
