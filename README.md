@@ -56,12 +56,7 @@ The Anchore Enterprise Feed Service is delivered as a Docker container that can 
     - Egress
         - The Anchore Feed Service module requires access to the upstream data feeds from supported Linux distributions and package registries.
 
-    | Host | Port | Description |
-    | --- | --- |
-    | linux.oracle.com | 443  | Oracle Linux Security Feed | 
-    | git.alpinelinux.com | 443 | Alpine Linux Security database |
-
-| Command | Description |
+| Host | Port |
 | --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
+| linux.oracle.com | 443 |
+| git.alpinelinux.com | 443 |
