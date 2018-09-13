@@ -58,5 +58,13 @@ The Anchore Enterprise Feed Service is delivered as a Docker container that can 
 
 | Host | Port | Description |
 | --- | --- | --- |
-| linux.oracle.com | 443 | Here |
-| git.alpinelinux.com | 443 | Here |
+| linux.oracle.com | 443 | Oracle Linux Security Feed |
+| git.alpinelinux.com | 443 | Alpine Linux Security database |
+| github.com | 443 | Alpine Linux Security database |
+| redhat.com | 443 | Red Hat Enterprise Linux security feed |
+| security-tracker.debian.org | 443 | Debian security feed |
+| salsa.debian.org | 443 | Debian security feed |
+| replicate.npmjs.com | 443 | NPM Registry package data |
+| s3-us-west-2.amazonaws.com | 443 | Ruby Gems data feed (stored in Amazon S3) |
+| static.nvd.nist.gov | 443 | NVD Database |
+| launchpad.net/ubuntu-cve-tracker | 443 | Ubuntu data |
