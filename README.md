@@ -38,7 +38,7 @@ The Anchore Enterprise Feed Service is delivered as a Docker container that can 
       Requirement: 20 GB storage.
 
 - Memory
-    The Anchore Feed Service Module should be allocated a minimum 4 GB of memory.
+    - The Anchore Feed Service Module should be allocated a minimum 4 GB of memory.
 
 - Storage
     - Configuration volume
