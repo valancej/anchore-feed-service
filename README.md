@@ -77,5 +77,17 @@ Make sure you've satisfied all of the requirememnts first.
 
 See the sample config files from this repository: https://github.com/valancej/anchore-feed-service
 
+This sample installation uses Docker Compose to run the Anchore Enterprise Feed Service and PostgreSQL database. 
+
+Be sure to update the volumes in the config file to match the correct directory referenced locally. 
+
+### Start the Anchore Enterprise Feed Service
+
+Run `docker-compose up -d` in the directory where the docker-compose.yaml file lives. 
+
+### Stop the Anchore Enterprise Feed Service
+
+Run `docker-compose down -v` in the directory where the docker-compose.yaml file lives. 
+
 
 
